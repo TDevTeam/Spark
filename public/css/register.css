@@ -1,5 +1,9 @@
 body{
-    background-color: #171717;
+    background-image: url("/images/mac-gold.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     padding: 0;
     margin: 0;
 }
@@ -11,6 +15,24 @@ body{
 
 a{
     text-decoration: none;
+    margin: auto;
+}
+
+.post{
+    width: 120px;
+    color: black;
+    height: 30px;
+    margin-top: auto;
+    border-radius: 20px;
+    border: 0;
+    font-size: 15px;
+    font-weight: bolder;
+    background-color: rgb(172, 172, 255);
+}
+
+.post:hover{
+    opacity: 0.8;
+    cursor: pointer;
 }
 
 .nav-bar{

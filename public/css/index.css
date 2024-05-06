@@ -1,6 +1,7 @@
 body{
     background-color: #171717;
     padding: 0;
+    width: 100%;
     margin: 0;
     height: 1330px;
 }
@@ -15,6 +16,7 @@ body{
     justify-content: center;
     justify-items: center;
     background-color: black;
+    width: 100%;
 }
 
 nav{
@@ -23,6 +25,7 @@ nav{
 
 a{
     text-decoration: none;
+    margin: auto;
 }
 
 .nav-list{
@@ -117,13 +120,43 @@ a{
 }
 
 .post{
-    width: 70px;
+    width: 120px;
     color: black;
     height: 30px;
-    margin-top: 15px;
+    margin-top: auto;
     border-radius: 20px;
     border: 0;
     font-size: 15px;
     font-weight: bolder;
     background-color: rgb(172, 172, 255);
+}
+
+.post:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.notifications-div{
+    width: 100%;
+    height: 120px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    padding-right: 0;
+}
+
+.notifications{
+    width: 330px;
+    height: 100px;
+    margin-left: 10px;
+    border-radius: 9px;
+    border: 3px #171717 solid;
+    background-color: black;
+    padding: 30px;
+}
+
+.notification-heading{
+    margin-top: 0;
+    margin-bottom: 35px;
 }
