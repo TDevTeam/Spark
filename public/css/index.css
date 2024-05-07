@@ -191,7 +191,7 @@ a{
 }
 
 .special-div{
-    display: flex;
+    display: none;
     justify-content: center;
     justify-items: center;
 }
@@ -233,6 +233,21 @@ a{
 
     .notifications-div{
         display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .nav-bar{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .notifications-div{
+        display: none;
+    }
+
+    .special-div{
+        display: flex;
     }
 }
 
