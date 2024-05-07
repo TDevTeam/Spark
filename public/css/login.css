@@ -139,3 +139,98 @@ form{
     text-align: center;
     margin-top: 40px;
 }
+
+.nav-links-media{
+    display: none;
+    margin-top: 15px;
+    margin-right: 30px;
+    height: fit-content;
+    width: fit-content;
+    border-radius: 3px;
+    padding: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-icon{
+    width: 25px;
+}
+
+.nav-icon-2{
+    width: 35px;
+}
+
+.special-a{
+    width: 50px;
+}
+
+.special-div{
+    display: none;
+    justify-content: center;
+    justify-items: center;
+}
+
+@media screen and (max-width: 900px) {
+    .nav-bar{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .nav-bar{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .special-div{
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    #post{
+        display: none;
+    }
+
+    .nav-bar{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .nav-links{
+        display: none;
+    }
+
+    .nav-links-media{
+        display: inline;
+    }
+
+    .login-div{
+        scale: 0.89;
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    .main-heading{
+        margin-left: 10px;
+        width: 120px;
+    }
+
+    .nav-list{
+        width: fit-content;
+    }
+
+    .login-div{
+        scale: 0.89;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .login-div{
+        scale: 0.89;
+    }
+}
