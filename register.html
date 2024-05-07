@@ -26,11 +26,11 @@
     <main>
         <div class="login-div">
             <div class="login-card">
-                <form action="/home">
+                <form action="/register" method="POST">
                 <!-- bruh -->
                     <h2 class="login-heading">Register an Account in <span class="blue">Spark!</span></h2>
-                    <input placeholder="Type your E-mail..." name="username" type="email" required autocomplete="off" autofocus><br>
-                    <input placeholder="Your Password" name="password" type="password" required autocomplete="off"><br>
+                    <input type="text" name="username" placeholder="Username" required><br>
+                    <input type="password" name="password" placeholder="Password" required><br>
                     <button class="login-button" type="submit">Register!</button>
                     <h3 class="not-user">Pro tip! <span class="blue">Don't forget you password</span></h3><br>
                 </form>
