@@ -118,6 +118,7 @@ a{
 .products:hover{
     background-color: #e7e9ea;
 }
+
 #post{
     width: 120px;
     color: black;
@@ -189,6 +190,12 @@ a{
     width: 50px;
 }
 
+.special-div{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
 @media screen and (max-width: 1500px) {
     .notifications{
         width: 250px;
@@ -255,12 +262,8 @@ a{
 
 @media screen and (max-width: 650px) {
 
-    a{
-        width: 50px;
-    }
-
     .main-heading{
-        margin-left: 90px;
+        margin-left: 10px;
         width: 120px;
     }
 
