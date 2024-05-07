@@ -18,7 +18,7 @@
                     <a href="/new"><li class="nav-links">New</li></a>
                     <a href="/search"><li class="nav-links">Search</li></a>
                     <a href="/profile"><li class="nav-links">You!</li></a>
-                    <a href="/login"><button class="post">Login/Sign up</button></a>
+                    <a href="/login"><button id="post">Login/Sign up</button></a>
                 </ul>
             </nav>
         </div>
@@ -43,5 +43,18 @@
             </div>
         </div>
     </main>
+    <script>
+        const username = getCookie('username');
+        if (username) {
+            document.getElementById('post').innerText = 'Hello, ' + username;
+            document.getElementById('post').disabled = true;
+        }
+
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+    </script>
 </body>
 </html>

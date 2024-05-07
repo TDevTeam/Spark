@@ -118,8 +118,7 @@ a{
 .products:hover{
     background-color: #e7e9ea;
 }
-
-.post{
+#post{
     width: 120px;
     color: black;
     height: 30px;
@@ -131,7 +130,7 @@ a{
     background-color: rgb(172, 172, 255);
 }
 
-.post:hover{
+#post:hover{
     opacity: 0.8;
     cursor: pointer;
 }

@@ -28,12 +28,20 @@ app.get('/index', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
 
-app.get('/register', (req, res) => {
-    res.sendFile(__dirname + '/register.html');
+const isAuthenticated = (req, res, next) => {
+    if (req.session.userId) {
+        res.redirect('/');
+    } else {
+        next();
+    }
+};
+
+app.get('/login', isAuthenticated, (req, res) => {
+    res.sendFile(__dirname + '/login.html');
 });
 
-app.get('/login', (req, res) => {
-    res.sendFile(__dirname + '/login.html');
+app.get('/register', isAuthenticated, (req, res) => {
+    res.sendFile(__dirname + '/register.html');
 });
 
 app.post('/register', async (req, res) => {
@@ -54,6 +62,7 @@ app.post('/login', async (req, res) => {
     const user = await User.findOne({ username });
     if (user && user.password === password) {
         req.session.userId = user._id;
+        res.cookie('username', username, { expires: false });
         res.redirect('/index');
     } else {
         res.redirect('/login');
