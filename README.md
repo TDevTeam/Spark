@@ -1,8 +1,10 @@
 # Spark :skull:
-Spark is a twitter clone made by The Dev Team using-
+Spark is a twitter clone made by The Dev Team
 
-Html, Css and JavaScript for the frontend .
+It was made with:
 
-NodeJS and Express for the backend.
+* Html, Css and JavaScript for the frontend .
+* NodeJS and Express for the backend.
+* Using MongoDB atlas for the Database.
 
-Using MongoDB atlas for the Database.
+:skull:
