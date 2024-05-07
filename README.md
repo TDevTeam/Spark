@@ -7,4 +7,4 @@ It was made with:
 * NodeJS and Express for the backend.
 * Using MongoDB atlas for the Database.
 
-:skull:
+> :skull: Hope you like it 
