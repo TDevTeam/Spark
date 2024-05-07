@@ -165,6 +165,14 @@ form{
     width: 50px;
 }
 
+.special-a-2{
+    width: 30px;
+}
+
+.special-a-3{
+    width: 40px;
+}
+
 .special-div{
     display: none;
     justify-content: center;
@@ -206,10 +214,17 @@ form{
 
     .nav-links-media{
         display: inline;
+        margin: 0;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .login-div{
         scale: 0.89;
+    }
+
+    .login-card{
+        margin-top: 60px;
     }
 }
 
@@ -217,6 +232,7 @@ form{
 
     .main-heading{
         margin-left: 10px;
+        margin-right: 10px;
         width: 120px;
     }
 
@@ -224,13 +240,13 @@ form{
         width: fit-content;
     }
 
-    .login-div{
+    .login-card{
         scale: 0.89;
     }
 }
 
 @media screen and (max-width: 500px) {
-    .login-div{
+    .login-card{
         scale: 0.89;
     }
 }

@@ -62,6 +62,7 @@ a{
 .login-div{
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .login-card{
@@ -117,7 +118,7 @@ input{
     transition: background-color 0.5s;
 }
 
-.post{
+#post{
     width: 120px;
     color: black;
     height: 30px;
@@ -129,7 +130,7 @@ input{
     background-color: rgb(172, 172, 255);
 }
 
-.post:hover{
+#post:hover{
     opacity: 0.8;
     cursor: pointer;
 }
@@ -163,4 +164,119 @@ textarea{
     font-size: 15px;
     background-color: #171717;
     resize: none;
+}
+
+.nav-links-media{
+    display: none;
+    margin-top: 15px;
+    margin-right: 30px;
+    height: fit-content;
+    width: fit-content;
+    border-radius: 3px;
+    padding: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-icon{
+    width: 25px;
+}
+
+.nav-icon-2{
+    width: 35px;
+}
+
+.special-a{
+    width: 50px;
+}
+
+.special-a-2{
+    width: 30px;
+}
+
+.special-a-3{
+    width: 40px;
+}
+
+.special-div{
+    display: none;
+    justify-content: center;
+    justify-items: center;
+}
+
+@media screen and (max-width: 900px) {
+    .nav-bar{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .nav-bar{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .special-div{
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    #post{
+        display: none;
+    }
+
+    .nav-bar{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .nav-links{
+        display: none;
+    }
+
+    .nav-links-media{
+        display: inline;
+        margin: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .login-div{
+        scale: 0.89;
+    }
+
+    .login-card{
+        margin-top: 60px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    .main-heading{
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 120px;
+    }
+
+    .nav-list{
+        width: fit-content;
+    }
+
+    textarea{
+        width: 246px;
+    }
+
+    .login-card{
+        scale: 0.89;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .login-card{
+        scale: 0.89;
+    }
 }

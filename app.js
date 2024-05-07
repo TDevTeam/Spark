@@ -28,6 +28,10 @@ app.get('/index', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
 
+app.get('/post', (req, res) => {
+    res.sendFile(__dirname + '/post.html');
+});
+
 app.get('/message', (req, res) => {
     res.sendFile(__dirname + '/message.html');
 });
