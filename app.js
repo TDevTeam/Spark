@@ -28,6 +28,22 @@ app.get('/index', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
 
+app.get('/message', (req, res) => {
+    res.sendFile(__dirname + '/message.html');
+});
+
+app.get('/new', (req, res) => {
+    res.sendFile(__dirname + '/new.html');
+});
+
+app.get('/index', (req, res) => {
+    res.sendFile(__dirname + '/search.html');
+});
+
+app.get('/profile', (req, res) => {
+    res.sendFile(__dirname + '/profile.html');
+});
+
 const isAuthenticated = (req, res, next) => {
     if (req.session.userId) {
         res.redirect('/');
