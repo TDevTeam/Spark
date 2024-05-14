@@ -89,6 +89,18 @@ app.post('/login', async (req, res) => {
     }
 });
 
+app.get('/logout', (req, res) => {
+    req.session.destroy(err => {
+      if (err) {
+        console.error('Error destroying session:', err);
+        res.redirect('/?logoutError=true');
+      } else {
+        res.clearCookie('username');
+        res.redirect('/login');
+      }
+    });
+  });  
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, (error) =>{ 
     if(!error) 

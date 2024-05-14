@@ -27,29 +27,12 @@
                         <a class="special-a" href="/profile"><li class="nav-links-media"><img class="nav-icon" src="/images/profile.png"></li></a>
                     </div>
                     <a href="/login"><button id="post">Login/Sign up</button></a>
+                    <button id="logout-button">Logout</button>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-        <div class="notifications-div">
-            <div class="notifications">
-                <h4 class="notification-heading">Welcome to Spark!</h4>
-                <p class="notification-text">Spark Support team warmly welcome you to our plattform</p>
-            </div>
-            <div class="notifications">
-                <h4 class="notification-heading">Welcome to Spark!</h4>
-                <p class="notification-text">Spark Support team warmly welcome you to our plattform</p>
-            </div>
-            <div class="notifications">
-                <h4 class="notification-heading">Welcome to Spark!</h4>
-                <p class="notification-text">Spark Support team warmly welcome you to our plattform</p>
-            </div>
-            <div class="notifications">
-                <h4 class="notification-heading">Welcome to Spark!</h4>
-                <p class="notification-text">Spark Support team warmly welcome you to our plattform</p>
-            </div>
-        </div>
     </main>
     <script>
         const username = getCookie('username');
@@ -62,6 +45,24 @@
             const value = `; ${document.cookie}`;
             const parts = value.split(`; ${name}=`);
             if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+    </script>
+    <script>
+        const logoutButton = document.getElementById('logout-button');
+        logoutButton.addEventListener('click', () => {
+            fetch('/logout')
+            .then(response => {
+                if (!response.ok) {
+                console.error('Error logging out:', response.statusText);
+                } else {
+                window.location.href = '/login';
+                }
+            });
+        });
+        if (document.cookie.indexOf('username') !== -1) {
+            logoutButton.style.display = 'block';
+        } else {
+            logoutButton.style.display = 'none';
         }
     </script>
 </body>
