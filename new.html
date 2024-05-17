@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/new.css">
+    <link rel="icon" type="x/icon" href="/images/sparkler.svg">
+    <title>Spark</title>
+</head>
+<body>
+    <header>
+        <div class="nav-bar">
+            <nav>
+                <ul class="nav-list">
+                    <a href="/home"><h2 class="main-heading">Spark 🎇</h2><br></a>
+                    <a href="/home"><li class="nav-links">Home</li></a>
+                    <a href="/message"><li class="nav-links">Message</li></a>
+                    <a href="/new"><li class="nav-links">New</li></a>
+                    <a href="/search"><li class="nav-links">Search</li></a>
+                    <a href="/profile"><li class="nav-links">You!</li></a>
+                    <!-- Bruh -->
+                    <div class="special-div">
+                        <a class="special-a" href="/home"><li class="nav-links-media"><img class="nav-icon" src="/images/home.png"></li></a>
+                        <a class="special-a" href="/message"><li class="nav-links-media"><img class="nav-icon" src="/images/message.png"></li></a>
+                        <a class="special-a" href="/new"><li class="nav-links-media"><img class="nav-icon-2" src="/images/sparkling.png"></li></a>
+                        <a class="special-a" href="/search"><li class="nav-links-media"><img class="nav-icon" src="/images/search.png"></li></a>
+                        <a class="special-a" href="/profile"><li class="nav-links-media"><img class="nav-icon" src="/images/profile.png"></li></a>
+                    </div>
+                    <a href="/login"><button id="post">Login/Sign up</button></a>
+                    <button id="logout-button">Logout</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+    </main>
+    <script>
+        const username = getCookie('username');
+        if (username) {
+            document.getElementById('post').innerText = 'Hello, ' + username;
+            document.getElementById('post').disabled = true;
+        }
+
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+    </script>
+    <script>
+        const logoutButton = document.getElementById('logout-button');
+        logoutButton.addEventListener('click', () => {
+            fetch('/logout')
+            .then(response => {
+                if (!response.ok) {
+                console.error('Error logging out:', response.statusText);
+                } else {
+                window.location.href = '/login';
+                }
+            });
+        });
+        if (document.cookie.indexOf('username') !== -1) {
+            logoutButton.style.display = 'block';
+        } else {
+            logoutButton.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

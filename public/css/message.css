@@ -1,6 +1,5 @@
 body{
-    background-color: white;
-    /* background-color: #171717; */
+    background-color: #171717;
     padding: 0;
     width: 100%;
     margin: 0;
@@ -52,6 +51,11 @@ a{
     transition: background-color 0.3s, color 0.3s;
 }
 
+.nav-links:hover{
+    background-color: #e7e9ea;
+    color: black;
+}
+
 #logout-button{
     width: 90px;
     color: black;
@@ -65,11 +69,6 @@ a{
     background-color: transparent;
     color: white;
     transition: background-color 0.3s, color 0.3s;
-}
-
-.nav-links:hover{
-    background-color: #e7e9ea;
-    color: black;
 }
 
 #logout-button:hover{
@@ -148,7 +147,7 @@ a{
 }
 
 #post{
-    width: fit-content;
+    width: 120px;
     color: black;
     height: 30px;
     margin-top: auto;
@@ -156,8 +155,6 @@ a{
     border: 0;
     font-size: 15px;
     font-weight: bolder;
-    padding-left: 16px;
-    padding-right: 16px;
     background-color: rgb(172, 172, 255);
 }
 
@@ -171,6 +168,7 @@ a{
     border-radius: 3px;
     cursor: default;
     background-color: #e7e9ea;
+    width: 110px;
 }
 
 .nav-links-media{

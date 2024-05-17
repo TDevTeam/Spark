@@ -40,7 +40,7 @@ app.get('/new', (req, res) => {
     res.sendFile(__dirname + '/new.html');
 });
 
-app.get('/index', (req, res) => {
+app.get('/search', (req, res) => {
     res.sendFile(__dirname + '/search.html');
 });
 
@@ -70,10 +70,18 @@ app.post('/register', async (req, res) => {
     try {
         const user = await User.create({ username, password });
         req.session.userId = user._id;
-        res.redirect('/');
+        res.sendFile(__dirname + '/login.html');
     } catch (error) {
-        console.error(error);
-        res.status(500).send('Error registering user');
+        if (error instanceof mongoose.Error.ValidationError) {
+            console.error('Validation error:', error.message);
+            res.status(400).send('Validation error');
+        } else if (error.code === 11000 && error.keyPattern.username === 1) {
+            console.error('Duplicate key error:', error.message);
+            res.status(400).send('Username already exists');
+        } else {
+            console.error('Error registering user:', error.message);
+            res.status(500).send('Error registering user');
+        }
     }
 });
 
